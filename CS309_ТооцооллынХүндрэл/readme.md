@@ -1,0 +1,3 @@
+# Тооцооллын хүндрэл /Computational Complexity/
+
+
