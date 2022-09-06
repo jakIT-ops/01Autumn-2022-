@@ -1,145 +1,208 @@
 #include<iostream>
-#include<conio.h>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 /** Бодлогын даалгавар:
- *	Оюутаны n хичээлийн дүн өгөгдсөн бол голч оноог бодож хэвлэ.
+ *      Оюутаны n хичээлийн дүн өгөгдсөн бол голч оноог бодож хэвлэ.
  **/
 
-void calculateGPA()
-{
-    int NoOfSubs;
-    double credits[NoOfSubs];
-    double points[NoOfSubs];
-    double sum = 0;
-    double total;
-    double totalCredits = 0;
-
-    system("cls");
-    cout<<"---------------------------------"<<endl;
-	cout<<"  GPA Calculator    	            "<<endl;
-    cout<<"---------------------------------"<<endl;
-
-	cout<<" Enter No of Subjects : ";
-    cin>>NoOfSubs;
-
-    cout<<endl;
-    for(int i=0; i<NoOfSubs; i++)
-    {
-        cout<<"Enter credits of subject "<<i+1<<" : ";
-        cin>>credits[i];
-        cout<<"Enter points of subject "<<i+1<<" : ";
-        cin>>points[i];
-        cout<<"----------------------------------------------"<<endl<<endl;
-    }
-
-    for(int i=0; i<NoOfSubs; i++)
-    {
-        total = credits[i]*points[i];
-        sum += total;
-    }
-
-    for(int i=0; i<NoOfSubs; i++)
-        totalCredits += credits[i];
-
-
-	cout<<endl<<endl;
-    cout<<"Total Points: "<<sum<<endl;
-	cout<<"Total Credits: "<<totalCredits<<endl;
-	cout<<"Total GPA: "<<sum/totalCredits<<endl;
-
-	cout<<"\n Press any key to go back to menu...";
-    getch();
-}
-void calculateCGPA()
-{
-    system("cls");
-    int NoOfSubs;
-
-    cout<<"---------------------------------"<<endl;
-	cout<<"  CGPA Calculator    	        "<<endl;
-    cout<<"---------------------------------"<<endl;
-
-	cout<<"Enter No of Subjects : ";
-    cin>>NoOfSubs;
-
-    double semesters[NoOfSubs];
-    double semTotal=0;
-
-    for(int i=0; i<NoOfSubs; i++)
-    {
-        cout<<"Enter Semester # " << i+1 << " GPA: ";
-        cin>>semesters[i];
-    }
-
-    for(int i=0; i<NoOfSubs; i++)
-        semTotal += semesters[i];
-
-    cout<<"Your CGPA : " << semTotal/NoOfSubs << endl;
-
-	cout<<"\n Press any key to go back to menu...";
-    getch();
-}
-
-void instructions(){
-	system("cls");
-	cout<<endl<<endl;
-    cout<<"How to calculate GPA and CGPA: "<<endl;
-    cout<<"-------------------------------"<<endl<<endl;
-    cout<<" GPA = Sum of (Credit*Point) / total of credits "<<endl<<endl;
-    cout<<" CGPA =  Sum of GPA / number of semesters "<<endl;
-
-    cout<<endl<<endl;
-    cout<<" Grade - Point Table: "<<endl;
-    cout<<"-------------------------------------"<<endl;
-    cout<<"\tGrade \t\t 4.0 Scale"<<endl;
-    cout<<"-------------------------------------"<<endl<<endl;
-    cout<<"\tA+ \t\t 4.0 "<<endl;
-    cout<<"\tA \t\t 4.0 "<<endl;
-    cout<<"\tA- \t\t 3.7 "<<endl;
-    cout<<"\tB+ \t\t 3.3 "<<endl;
-    cout<<"\tB \t\t 3.0 "<<endl;
-    cout<<"\tB- \t\t 2.7 "<<endl;
-    cout<<"\tC+ \t\t 2.3 "<<endl;
-    cout<<"\tC \t\t 2.0 "<<endl;
-    cout<<"\tC- \t\t 1.7 "<<endl;
-    cout<<"\tD+ \t\t 1.3 "<<endl;
-    cout<<"\tD \t\t 1.0 "<<endl;
-    cout<<"\tD- \t\t 0.7 "<<endl;
-    cout<<"\tF \t\t 0.0 "<<endl;
-
-	cout<<"\n Press any key to go back to menu...";
-    getch();
-}
-
+double myGrades[29] = {60.00, 79.00, 99.00, 100.00, 67.00, 81.00, 91.00, 67.00, 59.00, 48.00, 100.00, 58.00, 98.00, 100.00, 96.00, 93.00, 84.00, 84.00, 96.00, 75.00, 100.00, 84.00, 91.00, 95.00, 93.00, 91.00, 92.00, 55.00, 91.00};
+double myCredits[29] = {3.0, 3.0, 3.0, 2.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 1.0, 3.0, 2.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 2.0};
+const int allCredit = 82;
+const double expectedGpa = 2.70; // calc oyutanii web
 
 /** Үнэлгээний голч дүн (GPA)
- *	Үнэлгээний голч дүнг тооцохдоо, хичээл бүрийн үсгэн үнэлгээг үнэлгээний оноонд шилжүүлэн. улмаар тухайн хичээлийн харгалзах кредитээр үржүүлж, дундажлах замаар тодорхойлно.
+ *      Үнэлгээний голч дүнг тооцохдоо, хичээл бүрийн үсгэн үнэлгээг үнэлгээний оноонд шилжүүлэн. улмаар тухайн хичээлийн харгалзах кредитээр үржүүлж, дундажлах замаар тодорхойлно.
  * */
 
+void calcRatingScore(double grade[], vector<double>& ratingScore){
 
-int main()
-{ 
-	do{
-		system("cls");
-		cout<<" ------------------------------------ "<<endl; 
-		cout<<" |          GPA Calculator          | "<<endl; 
-		cout<<" ------------------------------------"<<endl<<endl;
-		cout<<"1. Calculate GPA"<<endl;
-		cout<<"2. Calculate CGPA"<<endl;
-		cout<<"3. How to calculate GPA?"<<endl;	 
-		cout<<"4. Quit"<<endl<<endl;
-		cout<<"Select option: ";
-		char op = getche();
-		
-		if( op=='1') calculateGPA();
-		else if( op=='2') calculateCGPA();
-		else if( op=='3') instructions();
-		else if( op=='4') exit(0);
-		
-	}while(1);
-	
-	return 0;
+    for(int i = 0; i< 29; i++){
+        if(grade[i] >= 96 && grade[i] <= 100) ratingScore.push_back(4.0); // A
+        else if (grade[i] >= 91 && grade[i] <= 95) ratingScore.push_back(3.7); // A-
+        else if (grade[i] >= 88 && grade[i] <= 90) ratingScore.push_back(3.4); // B+
+        else if (grade[i] >= 84 && grade[i] <= 87) ratingScore.push_back(3.0); // B
+        else if (grade[i] >= 81 && grade[i] <= 83) ratingScore.push_back(2.7); // B-
+        else if (grade[i] >= 78 && grade[i] <= 80) ratingScore.push_back(2.4); // C+
+        else if (grade[i] >= 74 && grade[i] <= 77) ratingScore.push_back(2.0); // C
+        else if (grade[i] >= 71 && grade[i] <= 73) ratingScore.push_back(1.7); // C-
+        else if (grade[i] >= 68 && grade[i] <= 70) ratingScore.push_back(1.3); // D+
+        else if (grade[i] >= 64 && grade[i] <= 67) ratingScore.push_back(1.0); // D
+        else if (grade[i] >= 60 && grade[i] <= 63) ratingScore.push_back(0.7); // D-
+        else if (grade[i] >= 0 && grade[i] <= 59) ratingScore.push_back(0); // F
+    }
 }
+
+int main(){
+    vector<double> ratingScore;
+    calcRatingScore(myGrades, ratingScore);
+
+    double sum = 0;
+    double total;
+    double gpa;
+    long totalLessons, totalCredits;
+
+//    cout<<"Нийт хэдэн хичээл үзсэн бэ?"<<endl;
+//    cin >> totalLessons;
+//
+//    double credits[totalLessons];
+//    double points[totalLessons];
+
+//    for(int i = 1; i <= totalLessons; i++){
+//        cout<<"Хичээл: "<<i<<" Кредит"<<" : ";
+//        cin>>credits[i];
+//        cout<<"Хичээл: "<<i<<" Оноо"<<" : ";
+//        cin>>points[i];
+//        totalCredits = totalCredits + credits[i];
+//        cout<<"-----------------------------------------"<<endl<<endl;
+//    }
+//
+//    calcRatingScore(points, ratingScore);
+
+    cout <<"size:"<< ratingScore.size()<<endl;
+    for(int i = 0; i < ratingScore.size(); i++) {
+        total = myCredits[i] * ratingScore[i];// chanariin onoo
+        sum = sum + total;
+    }
+
+    gpa = sum / allCredit;
+    cout<<"My GPA: "<<gpa<<endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
 
