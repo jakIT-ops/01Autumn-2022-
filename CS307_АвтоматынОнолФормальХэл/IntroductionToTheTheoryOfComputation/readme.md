@@ -136,8 +136,13 @@ A `theorem` is mathematical statement proved true.
 
 ### FINDING PROOFS
 
-The only way to determine the truth or falsity of a mathematical statement is with a mathematical proof. Unfortunately, finding proofs isn’t always easy. It can’t be reduced to a simple set of rules or processes. During this course, you will be asked to present proofs of various statements. Don’t despair at the prospect! Even though no one has a recipe for producing proofs, some helpful general strategies are available.
+Математикийн нотолгоонд(proof) хэд хэдэн төрлийн аргументууд байнга гарч ирдэг. Энд бид тооцооллын онолд ихэвчлэн тохиолддог цөөн хэдэн зүйлийг тайлбарлав. Нотолгоо нь хэд хэдэн өөр дэд нотлох баримтуудыг агуулж болох тул нэгээс олон төрлийн аргумент агуулж болохыг анхаарна уу
 
+`PROOF` Let n be an even number greater that 2. Constuct graph G = (V, E) with n nodes as follows. The set of nodes of G is V = {0, 1, .........., n - 1}, and the set of edges of G is the set
+
+```
+E = {{i, i + 1} | for 0 <= i <= n - 2} U {{n - 1, 0}} U {{i, i + n / 2} | for 0 <= i <= n / 2 - 1}.
+```
 
 
 
