@@ -20,7 +20,10 @@ int main(int argc, char * argv[]){
 		perror(argv[1]);
 		exit(2);
 	}
-
+	
+	printf("filte type: %s\n", filetype[(sb.st_mode >> 12)  & 017]);
+	printf("permissions: %c%c%c%c%c%c%c%c%c\n",
+			(sb.st_mode & S_IRUSR) ? 'r' :')
 
 }
 
