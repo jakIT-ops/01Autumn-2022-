@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c43100cf-eb3d-48f6-ac1e-ff23550addee" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../CS201_АлгоритмШинжилгээБаЗохиомж/biydaalt/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS201_АлгоритмШинжилгээБаЗохиомж/biydaalt/.idea/biydaalt.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS201_АлгоритмШинжилгээБаЗохиомж/biydaalt/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS201_АлгоритмШинжилгээБаЗохиомж/biydaalt/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS201_АлгоритмШинжилгээБаЗохиомж/biydaalt/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS201_АлгоритмШинжилгээБаЗохиомж/biydaalt/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS201_АлгоритмШинжилгээБаЗохиомж/biydaalt/L01_Divisor_Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS201_АлгоритмШинжилгээБаЗохиомж/biydaalt/L02_Minimum_Swaps_ToMake_Sequences_Increasing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS201_АлгоритмШинжилгээБаЗохиомж/biydaalt/L03_Predict_The_Winner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS201_АлгоритмШинжилгээБаЗохиомж/biydaalt/L04_Palindrome_Partitioning.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS201_АлгоритмШинжилгээБаЗохиомж/biydaalt/L05_Minimum_Path_Sum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS201_АлгоритмШинжилгээБаЗохиомж/biydaalt/L06_Ugly_Number_II.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS201_АлгоритмШинжилгээБаЗохиомж/biydaalt/L07_Longest_String_Chain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS201_АлгоритмШинжилгээБаЗохиомж/biydaalt/readme.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2IfLxwjmSJE9UiUtggKAs9tk69S" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/jakit/01Autumn-2022-/CS307_АвтоматынОнолФормальХэл/IntroductionToTheTheoryOfComputation",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c43100cf-eb3d-48f6-ac1e-ff23550addee" name="Changes" comment="" />
+      <created>1670567940290</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670567940290</updated>
+      <workItem from="1670567941691" duration="7000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

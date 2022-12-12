@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/01Autumn-2022-.iml" filepath="$PROJECT_DIR$/.idea/01Autumn-2022-.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CS201_АлгоритмШинжилгээБаЗохиомж/CS201_АлгоритмШинжилгээБаЗохиомж.iml" filepath="$PROJECT_DIR$/CS201_АлгоритмШинжилгээБаЗохиомж/CS201_АлгоритмШинжилгээБаЗохиомж.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CS307_АвтоматынОнолФормальХэл/CS307_АвтоматынОнолФормальХэл.iml" filepath="$PROJECT_DIR$/CS307_АвтоматынОнолФормальХэл/CS307_АвтоматынОнолФормальХэл.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CS307_АвтоматынОнолФормальХэл/pushdown-automata/pushdown-automata.iml" filepath="$PROJECT_DIR$/CS307_АвтоматынОнолФормальХэл/pushdown-automata/pushdown-automata.iml" />
+    </modules>
+  </component>
+</project>
